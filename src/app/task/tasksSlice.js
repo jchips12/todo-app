@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
 import _ from "lodash";
 
-const TASK_URL = "/api/tasks/64d5c26a0f80fe1321cfa000";
+const TASK_URL = "/api/tasks/64d65713dd1d1f1e74fb8a97";
 
 const initialState = {
     data: {},
@@ -17,7 +17,7 @@ export const fetchTasks = createAsyncThunk('task/fetchTasks', async () => {
 });
 
 export const updateTasks = createAsyncThunk('task/updateTasks', async (data) => {
-    const response = await axios.put(TASK_URL,data);
+    const response = await axios.put(TASK_URL, data);
     return response.data;
 });
 
